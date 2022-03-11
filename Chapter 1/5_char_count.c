@@ -9,11 +9,11 @@ main()
     bl = 0;  // start count for blanks at 0
     t = 0;   // start count for tabs at 0
 
-    while ((c = getchar()) ! = EOF)
+    while ((c = getchar()) != EOF)
     {
         switch (c)
         {
-            case '':
+            case ' ':
                 ++bl;
                 break;
 
@@ -25,7 +25,7 @@ main()
                 ++nl;
                 break;
         }
-
-        printf("newlines: %d tabs: %d blanks: %d\n", nl, t, bl);
     }
+
+    printf("newlines: %d\ntabs: %d\nblanks: %d\n", nl, t, bl);
 }
